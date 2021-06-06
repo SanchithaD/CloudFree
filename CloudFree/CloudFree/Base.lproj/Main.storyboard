@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gvp-4q-dIZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="xr7-X0-tbx">
+            <objects>
+                <viewController id="gvp-4q-dIZ" customClass="ViewController" customModule="Better_Self" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aGi-j7-Fv5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8Y-U1-fv7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Anywhere to Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHc-s1-qmV">
+                                <rect key="frame" x="64" y="645" width="286.5" height="71"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="21"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ckD-rG-Qov" appends="YES" id="wjp-g7-8lo"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7HB-Sc-DP2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="t8Y-U1-fv7" firstAttribute="top" secondItem="aGi-j7-Fv5" secondAttribute="top" id="AI7-tf-Ltk"/>
+                            <constraint firstItem="t8Y-U1-fv7" firstAttribute="leading" secondItem="7HB-Sc-DP2" secondAttribute="leading" id="R42-Ub-hxQ"/>
+                            <constraint firstItem="aHc-s1-qmV" firstAttribute="centerY" secondItem="aGi-j7-Fv5" secondAttribute="centerY" constant="232.5" id="bde-MR-ehC"/>
+                            <constraint firstItem="t8Y-U1-fv7" firstAttribute="trailing" secondItem="7HB-Sc-DP2" secondAttribute="trailing" id="sau-MK-k6v"/>
+                            <constraint firstItem="aHc-s1-qmV" firstAttribute="centerX" secondItem="aGi-j7-Fv5" secondAttribute="centerX" id="wdP-So-hhr"/>
+                            <constraint firstItem="t8Y-U1-fv7" firstAttribute="bottom" secondItem="7HB-Sc-DP2" secondAttribute="bottom" id="yQL-NC-4Zx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="t8Y-U1-fv7" id="Hb7-KE-uvM"/>
+                        <outlet property="startLabel" destination="aHc-s1-qmV" id="gnD-0t-MGQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x21-By-BPp" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ckD-rG-Qov">
+                    <connections>
+                        <action selector="didTapView:" destination="gvp-4q-dIZ" id="wUe-ru-I4o"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
